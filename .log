@@ -1,0 +1,34 @@
+bundle install
+> Your Ruby version is 3.3.1, but your Gemfile specified 3.3.3
+
+echo "3.3.3" > .ruby_version
+bundle install
+Your Ruby version is 3.3.1, but your Gemfile specified 3.3.3
+
+rbenv install 3.3.3
+ruby-build: definition not found: 3.3.3
+
+See all available versions with `rbenv install --list-all'.
+
+If the version you need is missing, try upgrading ruby-build:
+
+
+git -C "$(rbenv root)"/plugins/ruby-build pull
+rbenv install --list-all | grep 3.3.3
+rbenv install 3.3.3
+rben local 3.3.3
+bundle install
+
+sudo apt-get install libvips
+export RAILS_ENV=test
+export NODE_ENV=test
+export COVERAGE=true
+export DATABASE_URL=postgres://postgres:postgres@localhost:5432/docuseal_test
+
+docker-compose up -d
+bundle exec rake db:create
+bundle exec rake db:migrate
+pnpm i -g yarn
+yarn install
+bundle exec rake assets:precompile
+bundle exec rspec

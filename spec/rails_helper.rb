@@ -17,6 +17,10 @@ WebMock.disable_net_connect!(allow_localhost: true)
 
 require 'simplecov' if ENV['COVERAGE']
 
+# print coverage env variable
+puts 'Coverage is enabled' if ENV['COVERAGE']
+SimpleCov.start "rails" if ENV["COVERAGE"]
+
 Capybara.server = :puma, { Silent: true }
 Capybara.disable_animation = true
 
